@@ -2,13 +2,12 @@ version: "2"
 
 services:
   jupyter:
+    container_name: datascience-jupyter-docker
     build: .
     ports:
       - 8888:8888
     volumes:
       - notebooks:/home/jupyter
-    container-name: datascience-jupyter
-
+    
 volumes:
   notebooks:
-    external: true
