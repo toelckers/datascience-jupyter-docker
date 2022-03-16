@@ -20,4 +20,4 @@ USER jupyter
 WORKDIR /home/jupyter
 
 # Start the jupyter notebook
-ENTRYPOINT ["jupyter", "notebook", "--ip=*", "--no-browser"]
+ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser"]

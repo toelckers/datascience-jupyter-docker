@@ -2,10 +2,13 @@ version: "2"
 
 services:
   jupyter:
-    container_name: datascience-jupyter-docker
+    #container_name: datascience-jupyter-docker
     build: .
+    ports:
+      - "8888:8888"        
     volumes:
-      - notebooks:/home/jupyter
+      # chown $(whoami) -R /path/to/your/dir
+      - ./notebooks:/home/jupyter
     
 volumes:
   notebooks:
